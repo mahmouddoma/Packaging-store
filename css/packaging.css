@@ -277,8 +277,9 @@ body {
         padding: 45px 0;
     }
     .grow .text01 h2{
-        margin-top: -50%;
-        margin-left: 15%;
+        margin-top: -41%;
+        margin-left: 18%;
+        font-size: 22px;
     }
     .grow .text01 .btn {
         width: 80%;
@@ -318,7 +319,7 @@ body {
     .row-design .content-design {
         float: left;
         width: 77%;
-        height: 85%;
+        height: 50%;
     }
     .row-design .content-design h1 {
     font-size: smaller;
@@ -551,7 +552,7 @@ body {
     .contact-info{
         min-width: 100%;
         margin-top: 100%;
-        margin-left: 55%;
+        margin-left: 60%;
     }
     .contact .contact-input h1 {
         margin-right: 140%; 
