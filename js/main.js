@@ -1,11 +1,11 @@
-let nums = document.querySelectorAll(".count .num");
-let count = document.querySelector(".this-side");
+let nums = document.querySelectorAll(".counter .num");
+let section = document.querySelector(".counter-content");
 let started = false;
 
 window.onscroll = function () {
-  if (window.scrollY >= count.offsetTop) {
+  if (window.scrollY >= section.offsetTop) {
     if (!started) {
-      nums.forEach((num) => startCount(count));
+      nums.forEach((num) => startCount(num));
     }
     started = true;
   }
