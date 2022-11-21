@@ -153,7 +153,7 @@ body {
 @media only screen and (max-width: 767px) {
 	.psd  {
 		width: auto;
-        height: 110vh;
+        height: 70vh;
 	}
 	.psd-content {
 		width: auto;
