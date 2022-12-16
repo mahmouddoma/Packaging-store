@@ -29,15 +29,9 @@ body {
 	font-weight: 400;
 	line-height: 1.5;
 }
-/*
-@media only screen and (max-width: 767px) {
-    .offcanvas  {
-
-    }
-} */
-
 /*section*/
-.packaging {
+.row .contact-packaging,
+.img-section {
 	background-color: var(--bg-color);
 }
 .contact-packaging h1 {
@@ -55,32 +49,28 @@ body {
 .contact-packaging h3 {
 	font-size: 1.2rem;
 }
-
 .contact-packaging p {
 	max-width: 500px;
 }
-
 .contact-packaging a {
 	color: rgba(0,0,0,.5)!important;
 	font-size: initial;
 }
-
 .contact-packaging h3 a:hover {
 	text-decoration: none;
 }
-
 .contact-packaging .btn {
 	border-radius: 40px;
 	font-size: 20px;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 320px) {
 	.packaging h1 {
-		width: 120%;
-    font-size: 20px;
+		width: 220px;
+        font-size: 20px;
 	}
-	.packaging h2 {
+	.packaging .fw-bolder {
 		font-size: 34px;
-
+        width: fit-content;
 	}
 	.packaging p {
 		font-size: smaller;
@@ -103,19 +93,32 @@ body {
 .wedo .container h2, h1 {
 	color: var(--dark-color);
 }
-
-.container .box {
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+    line-height: 2rem;
+}
+.container .content-box .box{
 	background-color: var(--bg-color);
-	border-radius: 25px;
-	min-height: 100%;
+    border-radius: 25px;
+    min-height: 90%;
+    height: 460px;
+    width: 360px;
 }
-
-.container .box img  {
-	margin-top: 20px;
-	width: 10%;
+.box .img-box .img01{
+    width: 60px;
+    margin: 20px;
 }
-
-
+.box .img-box {
+   text-align: center;
+}
+.box .img-box .img02 {
+    
+    content: '';
+    opacity: 0.5;
+    width: 50px;
+    margin: 20px;
+}
 .container .box p {
 	font-weight: 300;
     line-height: 1.8;
@@ -123,22 +126,32 @@ body {
     min-width: 100%;
 	font-size: small;
 }
+@media only screen and (max-width: 320px) {
+    .container .content-box .box {
+
+    }
+
+}
 /*psd mockup*/
 .psd {
-	position: relative;
-	background-image: url(../image/psd-img.jpg);
-	background-size: 100%;
-	background-size: cover;
-	height: 100vh;
-	background-position: 50% 50%;
+    position: relative;
+    background-image: url(../image/psd-img.jpg);
+    background-size: cover;
+    height: 120vh;
 }
-
 .psd-content {
-	background-color: #fff;
-	width: 45%;
+    background-color: #fff;
+    width: 525px;
+    height: 450px;
+    padding: 70px 45px;
+    margin-top: 100px;
 }
-
-.psd-content h3, a {
+.psd-content .btn {
+    height: 50px;
+    width: 230px;
+}
+.psd-content h3,
+a {
 	font-size: 16px;
 }
 
@@ -149,9 +162,19 @@ body {
 .psd-content h3 a:hover {
 	text-decoration: none;
 }
+.psd-content .text011 {
+    position: relative;
+    font-weight: 900;
+    font-size: 2.8rem;
+    margin: -40px auto 12px 0;
+    font-family: auto;
+}
 
-@media only screen and (max-width: 767px) {
-	.psd  {
+@media only screen and (max-width: 320px) {
+    .justify-content-end {
+        content: '';
+    }
+    .psd  {
 		width: auto;
         height: 70vh;
 	}
@@ -180,9 +203,14 @@ body {
 .display-3 {
     color: var(--dark-color);
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 320px) {
     .col-md-6 h2{
         font-size: medium;
+    }
+    .text-dark {
+        margin-top: 290px;
+    }
+    .row>* {
 
     }
     .text-about  {
@@ -192,10 +220,15 @@ body {
     }
     .text-2 {
         width: 100%;
+        margin-bottom: -150px;
+        font-size: small;
+        font-weight: bolder;
     }
     .counter-content {
         display: inline-block;
         font-size: 15px;
+        margin-bottom: 60px;
+        margin-top: 160px;
     }
     .row .num, .display-3 {
         font-size: 33px;
@@ -209,29 +242,32 @@ body {
 }
 /*Grow*/
 .grow {
+    width: 101%;
     background-color: var(--bg-color);
     margin-top: 30%;
     height: 120vh;
 }
 .grow img {
-    margin-top: -25%;
+    margin-top: -200px;
     border: 1px solid #efe7e7;
-    width: 50%;
+    width: 500px;
 }
 .grow .text01 p {
-    margin-left: 40%;
-    padding: 106px 0;
-    width: 25%;
+    font-weight: bold;
+    margin-left: 500px;
+    padding: 0 0;
+    width: 200px;
     font-size: .75rem;
+    margin-top: -100px;
 }
 .grow .text01 h1{
     color: #adcce9;
     background-color: #425465;
-    width: 25%;
+    width: 300px;
     border-radius: 40px;
-    margin-left: 40%;
+    margin-left: 470px;
     text-align: -webkit-center;
-    margin-top: -8%;
+    margin-top: -210px;
     padding: 70px 0;
     position: absolute;
 }
@@ -241,50 +277,54 @@ body {
     margin-top: -7%;
 }
 
-.grow .text01 .btn{
-    margin-left: 40%;
+.grow .row .btn{
+    margin-left: 520px;
+    width: 164px;
+}
+.ms-2 {
+    margin-left: -2.5rem!important;
 }
 .grow .text01 a:hover {
     text-decoration: none;
 }
 .grow .text03 p{
     font-size: smaller;
-    margin-left: 75%;
-    margin-top: -39%;
+    margin-left: 815px;
+    margin-top: -495px;
     font-weight: 200;
+    width: 260px;
 }
-@media only screen and (max-width: 767px){
+@media only screen and (max-width: 320px){
     .grow {
         display: flex;
         height: fit-content;
     }
     .grow img {
-        width: 100%;
+        width: -webkit-fill-available;
+        margin-top: -65px;
+        margin-right: 40px;
     }
     .bg-grow {
-        margin-left: -150px;
+        margin-left: 0;
     }
     .grow .text01 p {
-        margin-top: 75%;
-        width: 60%;
+        margin-top: 95px;
+        width: 200px;
         font-size: 10px;
-        margin-left: 22%;
+        margin-left: 48px;
     }
     .grow .text01 h1 {
-        margin-left: 35%;
-        margin-top: -20%;
+        margin-left: 199px;
+        margin-top: -153px;
         width: 35%;
         padding: 45px 0;
     }
     .grow .text01 h2{
-        margin-top: -41%;
-        margin-left: 18%;
-        font-size: 22px;
+        margin-top: -40px;
+        margin-left: 40px;
     }
     .grow .text01 .btn {
-        width: 80%;
-        margin-left: 0;
-        padding: 2px 0;
+        margin-left: 70px;
     }
     .grow .text03 p {
         font-size: 10px;
@@ -305,8 +345,18 @@ body {
 .row-design .content-design {
     background-color: rgb(255, 255, 255);
     border-radius: 40px;
-    width: 35%;
+    width: 450px;
     float: right;
+    height: 450px;
+}
+.fst-italic {
+    font-style: italic!important;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+.w-50 {
+    width: 45%!important;
+    height: 45px;
 }
 .row-design .content-design h2  {
     font-size: smaller;
@@ -315,11 +365,13 @@ body {
     font-size: small;
 
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 320px) {
+    .row-design {
+        width: 310px;
+    }
     .row-design .content-design {
-        float: left;
-        width: 77%;
-        height: 50%;
+        width: 258px;
+        height: auto;
     }
     .row-design .content-design h1 {
     font-size: smaller;
@@ -332,6 +384,9 @@ body {
     }
     .row-design .content-design a {
         font-size: xx-small;
+    }
+    .row-design .content-design .btn {
+        padding: 0 0;
     }
 }
 /*Our Project*/
@@ -370,10 +425,10 @@ body {
     object-fit: cover;
     object-position: center;
     cursor: pointer;
+    transition: all 800ms ease-in-out;
 }
 .row-project .component .box img:hover {
     transform: scale(1.5);
-    transition: all 500ms ease;
 }
 .row-project .component .content-project0 {
     position: absolute;
@@ -396,32 +451,35 @@ body {
 @media only screen and (max-width: 767px) {
     .row-project .component {
         display: grid;
-        grid-template-columns: repeat(1, auto);
+        grid-template-columns: repeat(2, auto);
+        width: 350px;
+        left: 0;
+        margin-top: 0;
     }
     .row-project .component .content-project0 {
-        margin-top: 560%;
-         margin-left: 50px;
+        margin-top: 577px;
+        margin-left: 50px;
     }
 }
 /*contact*/
-.contact {
+.contact-r {
     content: '';
     bottom: 0;
-    padding: 45% 0;
+    padding: 0 0;
     justify-content: center;
     display: flex;
     flex-direction: initial;
-    margin-top: 50%;
+    margin-top: 760px;
 }
-.contact .row .bg-contact {
+.contact-r .bg-contact {
     background-color: var(--bg-color);
-    width: calc(((100% - 715px) / 2) + -45px);
+    width: calc(((123% - 715px) / 2) + -45px);
     left: 0;
     right: auto;
     position: absolute !important;
-    height: 100% !important;
+    height: 130vh !important;
 }
-.contact .image-contact {
+.contact-r .image-contact {
     border: 0px solid transparent;
     min-height: 657px;
     background-position: 50% 50%;
@@ -431,34 +489,31 @@ body {
     background-clip: padding-box;
     background-origin: padding-box;
 }
-.contact .image-contact img {
+.contact-r .image-contact img {
     padding: 30px;
-    position: relative;
+    position: absolute;
     flex: 1;
     max-width: 100%;
+    height: 130vh;
+    margin-left: -310px;
     transition-duration: inherit;
+    border-radius: 60px;
 }
-.contact .contact-input {
-    content: '';
-    width: 40%;
-    float: right;
+.justify-content-end {
+    justify-content: flex-end!important;
+    margin-top: -570px;
 }
-
-.contact .contact-input h1 {
+.container-input .contact-input h1 {
     color: #425465;
     font-size: 50px;
     font-weight: 600;
     margin-bottom: 35px;
-    margin-left: -485px;
-
 }
-
-.contact .contact-input input {   
+.container-input .contact-input input {
     display: block;
     margin-top: 20px;
-    width: 230%;
+    width: 550px;
     height: 8%;
-    margin-left: -485px;
     padding: 20px 10px;
     background-image: none;
     background-clip: padding-box;
@@ -468,100 +523,93 @@ body {
     background-color: #f2f2f2;
     color: inherit;
 }
-
-
-.contact .contact-input input[type="massage" i]{
-    height: 215px;}
-
- .contact .contact-input input[type="submit" i] {
+.container-input  input[type="massage" i]{
+    height: 215px;
+}
+ .container-input input[type="submit" i] {
     cursor: pointer;
     background-color: #425465;
     color: #f2f2f2;
     text-transform: uppercase;
-
-    
 }
-.contact .contact-input input[type="submit" i]:hover {
+.container-input input[type="submit" i]:hover {
     background-color: #131212;
 }
 
-.contact .right-content {
+.container-input {
     content: '';
     display: flow-root;
-    margin-top: 28%;
     margin-left: -155%;
 }
 
-.contact  h2 {
+.container-input h2 {
     content: '';
     text-transform: none;
-    margin: 32px auto 0 0;
     color: #425465;
-    margin-top: -30px;
     font-size: 55px;
-    font-weight: 700;
+    font-weight: 500;
 }
 
-.contact h3 {
-    font-size: 30px;
-    font-style: italic;
-    font-family: 'Poppins', sans-serif;
+.container-input  h3 {
+    font-weight: 400;
+    font-size: 1.125rem;
+    margin: 20px auto 20px 0;
     color: rgb(80, 75, 75);
-    margin-top: 20px;
-    letter-spacing: 3px;
 }
 
-.contact a {
+.container-input  a {
     position: relative;
     font-family: 'Poppins', sans-serif;
-    font-size: 30px;
+    font-size: 16px;
     color: rgb(80, 75, 75);
-
 }
 
-.contact a:hover {
+.container-input a:hover {
     text-decoration: none;
     transition: 1s;
 }
 
-.contact .li-fa {
+.container-input  .li-fa {
     content: '';
     letter-spacing: 10px;
-    white-space: nowrap;
-    height: 39px;
+    height: 35px;
     min-height: 16px;
-    width: 207px;
-    min-width: 124px;
     margin: 32px auto 1px 3px;
     color: #425465;
     cursor: pointer;
 }
-@media only screen and (max-width: 767px) {
-    .contact {
-        margin-top: 360%;
-        text-align: center;
-        justify-content: center;
-        display: block;
-    }
-    .contact .row .bg-contact {
-        width: 100% !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
+@media only screen and (max-width: 320px)  {
+    .contact-r {
         margin-top: 0;
     }
-    .contact-info{
-        min-width: 100%;
-        margin-top: 100%;
-        margin-left: 60%;
+    .contact-r .bg-contact {
+        width: -webkit-fill-available;
     }
-    .contact .contact-input h1 {
-        margin-right: 140%; 
+    .contact-r .image-contact {
+        height: 76px;
+        padding: 100px 0;
     }
-    .right-content h3{
-        margin-left: 14%;
+    .contact-r .image-contact img{
+        height: 427px;
+        margin-left: 0px;
+        padding: 0 0;
     }
-    .right-content h2{
-        margin: unset;
-        font-size: revert;
+    .contact-input {
+    width: min-content;
+    margin-left: -144px;
+    margin-top: 600px;
+    }
+    .container-input .contact-input input {
+        width: -webkit-fill-available;
+    }
+    .container-input h2 {
+        margin-left: -144px;
+        font-size: xxx-large;
+    }
+    .container-input .li-fa {
+        margin-left: -144px;
+    }
+    .container-input h3 {
+        margin-left: -144px;
     }
 }
