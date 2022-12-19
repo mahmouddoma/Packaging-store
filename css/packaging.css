@@ -38,8 +38,8 @@ body {
 	content: '';
     font-size: 1rem;
 	letter-spacing: .5rem;
+    margin-top: 150px;
 }
-
 .contact-packaging h2 {
 	content: '';
     font-size: 3rem;
@@ -62,6 +62,7 @@ body {
 .contact-packaging .btn {
 	border-radius: 40px;
 	font-size: 20px;
+    margin-bottom: 155px;
 }
 @media only screen and (max-width: 320px) {
 	.packaging h1 {
@@ -113,7 +114,6 @@ body {
    text-align: center;
 }
 .box .img-box .img02 {
-    
     content: '';
     opacity: 0.5;
     width: 50px;
@@ -125,12 +125,6 @@ body {
     margin: 20px 0 0;
     min-width: 100%;
 	font-size: small;
-}
-@media only screen and (max-width: 320px) {
-    .container .content-box .box {
-
-    }
-
 }
 /*psd mockup*/
 .psd {
@@ -392,51 +386,24 @@ a {
 /*Our Project*/
 .row-project {
     background-color: var(--bg-color);
-    height: 866px;
-    margin-top: 0;
-    margin-bottom: 0;
 }
-.row-project .component {
-    position: absolute;
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    gap: 17px;
-    margin: 34px auto 0;
-    min-height: 100%;
-    padding: 25px 70px;
-}
-.row-project .component .box {
-    padding: 20px;
-    background-image: linear-gradient(0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2));
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    grid-gap: 17px;
-    left: 0;
-    top: 0;
-    opacity: 1;
+.row-project .component .box{
+    margin-top: 15px;
     overflow: hidden;
 }
 .row-project .component .box img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
+    width: 350px;
     cursor: pointer;
     transition: all 800ms ease-in-out;
+    opacity: 1;
+    transform: scale(1);
 }
 .row-project .component .box img:hover {
     transform: scale(1.5);
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2));
 }
 .row-project .component .content-project0 {
-    position: absolute;
-    margin-top: 107%;
-    padding: 0;
-    display: contents;
     display: inline-block;
-    margin-left: 40%;
 }
 .row-project .component .content-project0 h3 {
     font-size: small;
@@ -444,64 +411,46 @@ a {
 .row-project .component .content-project0 a{
     font-size: small;
 }
-
+.row-project .component .content-project0 .btn {
+    width: 210px;
+    height: 55px;
+}
 .row-project .component .content-project0 a:hover{
     text-decoration: none;
 }
 @media only screen and (max-width: 767px) {
     .row-project .component {
         display: grid;
-        grid-template-columns: repeat(2, auto);
-        width: 350px;
-        left: 0;
-        margin-top: 0;
+        grid-template-columns: repeat(1, auto);
+        padding: 0 30px;
+    }
+    .row-project .component .box{
+        width: 250px;
     }
     .row-project .component .content-project0 {
-        margin-top: 577px;
-        margin-left: 50px;
+        margin-top: 0;
+        margin-left: 0;
     }
 }
 /*contact*/
 .contact-r {
     content: '';
     bottom: 0;
-    padding: 0 0;
-    justify-content: center;
     display: flex;
-    flex-direction: initial;
-    margin-top: 760px;
 }
 .contact-r .bg-contact {
     background-color: var(--bg-color);
-    width: calc(((123% - 715px) / 2) + -45px);
-    left: 0;
-    right: auto;
-    position: absolute !important;
-    height: 130vh !important;
+    padding: 300px 0;
+    width: 450px;
 }
 .contact-r .image-contact {
-    border: 0px solid transparent;
-    min-height: 657px;
-    background-position: 50% 50%;
-    text-align: left;
-    position: relative;
-    display: flex;
-    background-clip: padding-box;
-    background-origin: padding-box;
+    margin-top: -600px;
+    padding: 30px;
 }
 .contact-r .image-contact img {
-    padding: 30px;
-    position: absolute;
     flex: 1;
-    max-width: 100%;
-    height: 130vh;
-    margin-left: -310px;
     transition-duration: inherit;
     border-radius: 60px;
-}
-.justify-content-end {
-    justify-content: flex-end!important;
-    margin-top: -570px;
 }
 .container-input .contact-input h1 {
     color: #425465;
@@ -510,10 +459,8 @@ a {
     margin-bottom: 35px;
 }
 .container-input .contact-input input {
-    display: block;
     margin-top: 20px;
     width: 550px;
-    height: 8%;
     padding: 20px 10px;
     background-image: none;
     background-clip: padding-box;
@@ -535,13 +482,6 @@ a {
 .container-input input[type="submit" i]:hover {
     background-color: #131212;
 }
-
-.container-input {
-    content: '';
-    display: flow-root;
-    margin-left: -155%;
-}
-
 .container-input h2 {
     content: '';
     text-transform: none;
@@ -557,8 +497,7 @@ a {
     color: rgb(80, 75, 75);
 }
 
-.container-input  a {
-    position: relative;
+.container-input a {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     color: rgb(80, 75, 75);
@@ -572,27 +511,16 @@ a {
 .container-input  .li-fa {
     content: '';
     letter-spacing: 10px;
-    height: 35px;
-    min-height: 16px;
-    margin: 32px auto 1px 3px;
     color: #425465;
     cursor: pointer;
 }
 @media only screen and (max-width: 320px)  {
+    .contact-r .bg-contact,
+    .contant01 {
+        display: none;
+    }
     .contact-r {
-        margin-top: 0;
-    }
-    .contact-r .bg-contact {
-        width: -webkit-fill-available;
-    }
-    .contact-r .image-contact {
-        height: 76px;
-        padding: 100px 0;
-    }
-    .contact-r .image-contact img{
-        height: 427px;
-        margin-left: 0px;
-        padding: 0 0;
+        margin-top: -310px;
     }
     .contact-input {
     width: min-content;
