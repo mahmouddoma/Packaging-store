@@ -6,6 +6,7 @@
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
 }
 /* Nav bar*/
 
@@ -65,6 +66,15 @@ body {
     margin-bottom: 155px;
 }
 @media only screen and (max-width: 320px) {
+    .sec01 {
+        width: 840px;
+        display: inline-grid;
+        overflow-x: hidden;
+    }
+    .navbar {
+        width: 401px;
+        overflow-x: hidden;
+    }
 	.packaging h1 {
 		width: 220px;
         font-size: 20px;
@@ -165,16 +175,12 @@ a {
 }
 
 @media only screen and (max-width: 320px) {
-    .justify-content-end {
-        content: '';
-    }
     .psd  {
-		width: auto;
-        height: 70vh;
+        width: 417px;
 	}
-	.psd-content {
-		width: auto;
-	}
+    .psd-content{
+        padding: 0 85px;
+    }
 }
 /*About Us*/
 .row .content-about h2 {
@@ -203,9 +209,6 @@ a {
     }
     .text-dark {
         margin-top: 290px;
-    }
-    .row>* {
-
     }
     .text-about  {
         font-size: 10px;
@@ -290,8 +293,8 @@ a {
 }
 @media only screen and (max-width: 320px){
     .grow {
-        display: flex;
         height: fit-content;
+        width: 411px;
     }
     .grow img {
         width: -webkit-fill-available;
@@ -357,11 +360,10 @@ a {
 }
 .row-design .content-design a {
     font-size: small;
-
 }
 @media only screen and (max-width: 320px) {
     .row-design {
-        width: 310px;
+        width: 400px;
     }
     .row-design .content-design {
         width: 258px;
@@ -387,9 +389,9 @@ a {
 .row-project {
     background-color: var(--bg-color);
 }
-.row-project .component .box{
-    margin-top: 15px;
+.row-project .component .box01 {
     overflow: hidden;
+    margin-bottom: 20px;
 }
 .row-project .component .box img {
     width: 350px;
@@ -397,6 +399,7 @@ a {
     transition: all 800ms ease-in-out;
     opacity: 1;
     transform: scale(1);
+    height: 250px;
 }
 .row-project .component .box img:hover {
     transform: scale(1.5);
@@ -418,6 +421,11 @@ a {
 .row-project .component .content-project0 a:hover{
     text-decoration: none;
 }
+@media only screen and (max-width: 320px){
+    .row-project {
+        width: 400px;
+    }
+}
 @media only screen and (max-width: 767px) {
     .row-project .component {
         display: grid;
@@ -427,30 +435,38 @@ a {
     .row-project .component .box{
         width: 250px;
     }
+    .row-project .component .box img {
+        width: 300px;
+        object-fit: cover;
+    }
     .row-project .component .content-project0 {
         margin-top: 0;
         margin-left: 0;
     }
 }
 /*contact*/
-.contact-r {
-    content: '';
-    bottom: 0;
-    display: flex;
-}
-.contact-r .bg-contact {
-    background-color: var(--bg-color);
-    padding: 300px 0;
-    width: 450px;
-}
 .contact-r .image-contact {
-    margin-top: -600px;
     padding: 30px;
+    position: relative;
+}
+.contact-r .image-contact::before{
+    content: "";
+    position: absolute;
+    background-color: var(--bg-color);
+    width: 400px;
+    height: 790px;
+    top: -5px;
+    left: 0;
+    z-index: -1;
+}
+.contact-r .container-input {
+    margin-top: 40px;
 }
 .contact-r .image-contact img {
-    flex: 1;
-    transition-duration: inherit;
     border-radius: 60px;
+    width: 525px;
+    height: 700px;
+    object-position: left;
 }
 .container-input .contact-input h1 {
     color: #425465;
@@ -515,10 +531,28 @@ a {
     cursor: pointer;
 }
 @media only screen and (max-width: 320px)  {
-    .contact-r .bg-contact,
-    .contant01 {
-        display: none;
+    .contact-r .image-contact img {
+        width: 200px;
+        height: 300px;
+        object-fit: cover;
     }
+    .container-input .contact-input input {
+        width: 387px;
+    }
+    .container-input {
+        margin-top: 500px;
+    }
+    .contact-input{
+        margin-left: -160px;
+    }
+    .input-info {
+        margin-left: -160px;
+    }
+    .contact-r .image-contact img {
+        width: 340px;
+        height: 400px;
+    }
+    /* .contact-r .bg-contact,
     .contact-r {
         margin-top: -310px;
     }
@@ -539,5 +573,15 @@ a {
     }
     .container-input h3 {
         margin-left: -144px;
-    }
+    } */
 }
+/* @media only screen and (max-width: 575px){
+.contact-r .image-contact {
+    height: 321px;
+    width: auto;
+    object-fit :cover;
+}
+.contact-r .image-contact img {
+    min-height: 420px;
+}
+} */
