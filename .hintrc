@@ -22,14 +22,19 @@
       }
     ],
     "compat-api/css": [
-      "default",
+      "off",
       {
         "ignore": [
-          "width: fit-content",
-          "height: fit-content"
+          "scroll-behavior"
         ]
       }
     ],
-    "no-inline-styles": "off"
+    "no-inline-styles": "off",
+    "axe/parsing": [
+      "default",
+      {
+        "duplicate-id-aria": "off"
+      }
+    ]
   }
 }

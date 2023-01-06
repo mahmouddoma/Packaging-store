@@ -20,3 +20,9 @@ function startCount(el) {
     }
   }, 2000 / goal);
 }
+
+window.scroll({
+  top: 3500, 
+  left: 0, 
+  behavior: 'smooth'
+});

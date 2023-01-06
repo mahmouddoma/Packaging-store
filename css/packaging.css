@@ -2,7 +2,6 @@
 	--dark-color: #425465;
 	--bg-color: #ede2d0;
 }
-
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-family: 'Roboto', sans-serif;
@@ -39,23 +38,27 @@ body {
 	content: '';
     font-size: 1rem;
 	letter-spacing: .5rem;
-    margin-top: 150px;
+    margin-top: 135px;
 }
 .contact-packaging h2 {
 	content: '';
-    font-size: 3rem;
+    font-size: 4rem;
+    margin-bottom: 20px;
 	color: var(--dark-color);
 	font-family: 'Oswald', sans-serif !important;
 }
 .contact-packaging h3 {
 	font-size: 1.2rem;
+    margin-bottom: 20px;
 }
 .contact-packaging p {
 	max-width: 500px;
+    margin-bottom: 20px;
 }
 .contact-packaging a {
 	color: rgba(0,0,0,.5)!important;
 	font-size: initial;
+    margin-bottom: 10px;
 }
 .contact-packaging h3 a:hover {
 	text-decoration: none;
@@ -64,12 +67,17 @@ body {
 	border-radius: 40px;
 	font-size: 20px;
     margin-bottom: 155px;
+    height: 60px;
 }
-@media only screen and (max-width: 320px) {
+@media (max-width: 575.98px) {
     .sec01 {
-        width: 840px;
+        margin: 0;
         display: inline-grid;
         overflow-x: hidden;
+        width: 800px;
+    }
+    .contact-packaging {
+        padding: 0 30px;
     }
     .navbar {
         width: 401px;
@@ -173,8 +181,7 @@ a {
     margin: -40px auto 12px 0;
     font-family: auto;
 }
-
-@media only screen and (max-width: 320px) {
+@media (max-width: 575.98px) {
     .psd  {
         width: 417px;
 	}
@@ -203,7 +210,7 @@ a {
 .display-3 {
     color: var(--dark-color);
 }
-@media only screen and (max-width: 320px) {
+@media (max-width: 575.98px) {
     .col-md-6 h2{
         font-size: medium;
     }
@@ -291,7 +298,7 @@ a {
     font-weight: 200;
     width: 260px;
 }
-@media only screen and (max-width: 320px){
+@media (max-width: 575.98px){
     .grow {
         height: fit-content;
         width: 411px;
@@ -361,7 +368,7 @@ a {
 .row-design .content-design a {
     font-size: small;
 }
-@media only screen and (max-width: 320px) {
+@media (max-width: 575.98px) {
     .row-design {
         width: 400px;
     }
@@ -421,7 +428,7 @@ a {
 .row-project .component .content-project0 a:hover{
     text-decoration: none;
 }
-@media only screen and (max-width: 320px){
+@media (max-width: 575.98px){
     .row-project {
         width: 400px;
     }
@@ -445,11 +452,11 @@ a {
     }
 }
 /*contact*/
-.contact-r .image-contact {
+.contact-form .contact-r .image-contact {
     padding: 30px;
     position: relative;
 }
-.contact-r .image-contact::before{
+.contact-form .contact-r .image-contact::before{
     content: "";
     position: absolute;
     background-color: var(--bg-color);
@@ -459,24 +466,18 @@ a {
     left: 0;
     z-index: -1;
 }
-.contact-r .container-input {
+.contact-form .contact-r {
     margin-top: 40px;
 }
-.contact-r .image-contact img {
+.contact-form .contact-r .image-contact img {
     border-radius: 60px;
     width: 525px;
     height: 700px;
     object-position: left;
 }
-.container-input .contact-input h1 {
-    color: #425465;
-    font-size: 50px;
-    font-weight: 600;
-    margin-bottom: 35px;
-}
-.container-input .contact-input input {
+
+.contact-form0 .form-control{
     margin-top: 20px;
-    width: 550px;
     padding: 20px 10px;
     background-image: none;
     background-clip: padding-box;
@@ -486,19 +487,17 @@ a {
     background-color: #f2f2f2;
     color: inherit;
 }
-.container-input  input[type="massage" i]{
-    height: 215px;
-}
- .container-input input[type="submit" i] {
+
+.contact-form0 .form-control {
     cursor: pointer;
-    background-color: #425465;
     color: #f2f2f2;
     text-transform: uppercase;
+    width: 500px;
 }
-.container-input input[type="submit" i]:hover {
+.contact-form0 .form-control[type="submit" ]:hover {
     background-color: #131212;
 }
-.container-input h2 {
+.contact-form .input-info h2 {
     content: '';
     text-transform: none;
     color: #425465;
@@ -506,82 +505,46 @@ a {
     font-weight: 500;
 }
 
-.container-input  h3 {
+.contact-form .input-info h3 {
     font-weight: 400;
     font-size: 1.125rem;
     margin: 20px auto 20px 0;
     color: rgb(80, 75, 75);
 }
 
-.container-input a {
+.contact-form .input-info a {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     color: rgb(80, 75, 75);
 }
 
-.container-input a:hover {
+.contact-form .input-info a:hover {
     text-decoration: none;
     transition: 1s;
 }
 
-.container-input  .li-fa {
+.contact-form .input-info .li-fa {
     content: '';
     letter-spacing: 10px;
     color: #425465;
     cursor: pointer;
 }
-@media only screen and (max-width: 320px)  {
-    .contact-r .image-contact img {
-        width: 200px;
-        height: 300px;
-        object-fit: cover;
+@media (max-width: 575.98px) {
+    .contact-form .contact-r .image-contact img {
+        padding: 149px 90px;
+        float: right;
+        margin: -120px -323px;
     }
-    .container-input .contact-input input {
-        width: 387px;
+    .contact-form0 .form-control {
+        padding: 22px 27px;
+        width: fit-content;
     }
-    .container-input {
-        margin-top: 500px;
+    .contact-form0 {
+        margin-top: 455px;
+        margin-left: -113px;
     }
-    .contact-input{
-        margin-left: -160px;
+    .contact-form .contact-r .image-contact::before {
+        margin-top: -90px;
+        height: 263vh;
     }
-    .input-info {
-        margin-left: -160px;
-    }
-    .contact-r .image-contact img {
-        width: 340px;
-        height: 400px;
-    }
-    /* .contact-r .bg-contact,
-    .contact-r {
-        margin-top: -310px;
-    }
-    .contact-input {
-    width: min-content;
-    margin-left: -144px;
-    margin-top: 600px;
-    }
-    .container-input .contact-input input {
-        width: -webkit-fill-available;
-    }
-    .container-input h2 {
-        margin-left: -144px;
-        font-size: xxx-large;
-    }
-    .container-input .li-fa {
-        margin-left: -144px;
-    }
-    .container-input h3 {
-        margin-left: -144px;
-    } */
 }
-/* @media only screen and (max-width: 575px){
-.contact-r .image-contact {
-    height: 321px;
-    width: auto;
-    object-fit :cover;
-}
-.contact-r .image-contact img {
-    min-height: 420px;
-}
-} */

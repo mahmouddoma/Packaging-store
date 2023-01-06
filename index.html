@@ -18,7 +18,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,500;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,500&display=swap" rel="stylesheet">
     </head>
-    <body>
+    <body data-bs-spy="scroll" data-bs-target=".navbar">
         <!--Navbar-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
@@ -44,12 +44,21 @@
             </div>
             <div class="offcanvas-body">
                 <ul class="">
-                    <li><a href="index">Home</a></li>
+                    <li><a class="nav-link" href="#home">Home</a></li>
+                    <li><a class="nav-link" href="#wedo">WE DO</a></li>
+                    <li><a class="nav-link" href="#psd">P S D</a></li>
+                    <li><a class="nav-link" href="#about">About</a></li>
+                    <li><a class="nav-link" href="#grow">Grow</a></li>
+                    <li><a class="nav-link" href="#design">DESIGN</a></li>
+                    <li><a class="nav-link" href="#project">Project</a></li>
+                    <li><a class="nav-link" href="#design">DESIGN</a></li>
+                    <li><a class="nav-link" href="#contact">Contact</a></li>
+
                 </ul>
             </div>
           </div>
         <!---Section two-->
-        <section class="row sec01">
+        <section class="row sec01" id="home">
             <div class="img-section col-6">
                 <img src="image/sdsdsds-min.jpg" class="img-fluid" alt="Responsive image">
             </div>
@@ -64,7 +73,7 @@
             </div>
         </section>
         <!--WE Do-->
-        <div class="wedo pb-5 pt-5">
+        <div class="wedo pb-5 pt-5" id="wedo">
             <div class="container">
                 <div class="row text-center m-5">
                     <h1>WHAT WE DO</h1>
@@ -133,7 +142,7 @@
             </div>
         </div>
         <!--PSD MOCKUP-->
-        <div class="row psd justify-content-end">
+        <div class="row psd justify-content-end" id="psd">
                 <div class="psd-content rounded-5 me-5 justify-content-center">
                     <h1 class="text011 mt-1">We develop meaningful projects</h1>
                     <p class="fs-6 fw-light ">Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
@@ -142,7 +151,7 @@
                 </div>
         </div>
         <!-- About US-->
-        <div class="row m-5">
+        <div class="row m-5" id="about">
             <div class="col-md-6">
                 <h1 class="text-uppercase fs-6 text-dark mb-3">About Us</h1>
                 <h2 class="fw-bold fst-italic">We are the best agency to improve your deals</h2>
@@ -171,7 +180,7 @@
             </div>
         </div>
         <!--Grow-->
-        <section class="row grow">
+        <section class="row grow" id="grow">
             <div class="pic-one">
                 <img src="image/2786461_398248-PCRYWC-731.jpg" alt="halal" class="rounded-5 ms-5">
             </div>
@@ -192,7 +201,7 @@
             </div>
         </section>
         <!--Design-->
-        <div class="row-design">
+        <div class="row-design" id="design">
             <div class="content-design m-5 p-2 col-md-6">
                 <h1 class="mt-5 ms-3 fw-bolder">Why do we design packaging? 
                 </h1>
@@ -202,7 +211,7 @@
             </div>
         </div>
         <!--Our Project-->
-        <div class="row-project text-center">
+        <div class="row-project text-center" id="project">
             <div class="content">
                 <div class="head mb-5 pt-5">
                     <h1 class="display-1 fw-normal">Our Project</h1>
@@ -266,23 +275,56 @@
             </div>
         </div>
         <!--Contact-->
-        <div class="row mt-5">
-            <div class="contact-r col-6">
-                <div class="contant01">
-                    <div class="image-contact">
-                        <img src="image/cheerful-positive-young-european-woman-with-dark-hair-broad-shining-smile-points-with-thumb-aside.jpg" alt="" class="">
-                    </div>
-                </div>
-            </div> 
-                <div class="col-6">
-                    <div class="container-input">
-                        <div class="contact-input">
-                            <h1>Contact Form</h1>
-                            <input type="name" placeholder="Enter Your Name">
-                            <input type="email" placeholder="Enter a valid email Name">
-                            <input type="massage" placeholder="Type Your Massage"> 
-                            <input type="submit">
+        <div class="row mt-5" id="contact">
+            <div class="contact-form d-flex">
+                <div class="contact-r col-6">
+                    <div class="contant01">
+                        <div class="image-contact">
+                            <img src="image/cheerful-positive-young-european-woman-with-dark-hair-broad-shining-smile-points-with-thumb-aside.jpg" alt="" class="">
                         </div>
+                    </div>
+                </div> 
+                <div class="contact-form0">
+                    <div class="container py-4 mt-5">
+                        <h1 class="fw-bold display-4">contact form</h1>
+                        <!-- Bootstrap 5 starter form -->
+                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                      
+                          <!-- Name input -->
+                          <div class="mb-3">
+                            <input class="form-control" id="name" type="text" placeholder="Name" data-sb-validations="required" />
+                            <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                          </div>
+                      
+                          <!-- Email address input -->
+                          <div class="mb-3">
+                            <input class="form-control" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required, email" />
+                            <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
+                            <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
+                          </div>
+                      
+                          <!-- Message input -->
+                          <div class="mb-3">
+                            <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;" data-sb-validations="required"></textarea>
+                            <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
+                          </div>
+                      
+                          <!-- Form submissions success message -->
+                          <div class="d-none" id="submitSuccessMessage">
+                            <div class="text-center mb-3">Form submission successful!</div>
+                          </div>
+                      
+                          <!-- Form submissions error message -->
+                          <div class="d-none" id="submitErrorMessage">
+                            <div class="text-center text-danger mb-3">Error sending message!</div>
+                          </div>
+                      
+                          <!-- Form submit button -->
+                          <div class="d-grid">
+                            <button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button>
+                          </div>
+                      
+                        </form>
                         <div class="input-info">
                             <h2>follow us</h2>
                             <div class="li-fa">	
@@ -296,6 +338,10 @@
                         </div>
                     </div>
                 </div>
+                
+                  
+            </div>
+            
         </div>
         <script src="js/all.min.js" async defer></script>
         <script src="js/bootstrap.bundle.min.js" async defer></script>
