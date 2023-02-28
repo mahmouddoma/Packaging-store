@@ -469,14 +469,14 @@ a {
 .contact-form .contact-r {
     margin-top: 40px;
 }
-.contact-form .contact-r .image-contact img {
+.contact-r .image-contact img {
     border-radius: 60px;
-    width: 525px;
-    height: 700px;
+    /* width: 525px;
+    height: 700px; */
     object-position: left;
 }
 
-.contact-form0 .form-control{
+.form-control{
     margin-top: 20px;
     padding: 20px 10px;
     background-image: none;
@@ -488,48 +488,49 @@ a {
     color: inherit;
 }
 
-.contact-form0 .form-control {
+.form-control {
     cursor: pointer;
     color: #f2f2f2;
     text-transform: uppercase;
-    width: 500px;
 }
-.contact-form0 .form-control[type="submit" ]:hover {
-    background-color: #131212;
+#submitButton{
+    background-color: #425465;
 }
-.contact-form .input-info h2 {
+#submitButton:hover {
+    background-color: #040404;
+}
+.input-info h2 {
     content: '';
     text-transform: none;
     color: #425465;
-    font-size: 55px;
+    font-size: 50px;
     font-weight: 500;
 }
-
-.contact-form .input-info h3 {
+.input-info h3 {
     font-weight: 400;
     font-size: 1.125rem;
     margin: 20px auto 20px 0;
     color: rgb(80, 75, 75);
 }
 
-.contact-form .input-info a {
+.input-info a {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     color: rgb(80, 75, 75);
 }
 
-.contact-form .input-info a:hover {
+.input-info a:hover {
     text-decoration: none;
     transition: 1s;
 }
 
-.contact-form .input-info .li-fa {
+.input-info .li-fa {
     content: '';
     letter-spacing: 10px;
     color: #425465;
     cursor: pointer;
-}
-@media (max-width: 575.98px) {
+ }
+/* @media (max-width: 575.98px) {
     .contact-form .contact-r .image-contact img {
         padding: 149px 90px;
         float: right;
@@ -547,4 +548,4 @@ a {
         margin-top: -90px;
         height: 263vh;
     }
-}
+} */

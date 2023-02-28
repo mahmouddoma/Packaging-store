@@ -1,11 +1,12 @@
-let nums = document.querySelectorAll(".counter .num");
-let section = document.querySelector(".counter-content");
+let num = document.querySelectorAll(".counter .num");
+let counter = document.querySelector(".counter-content");
+// @ts-ignore
 let started = false;
 
 window.onscroll = function () {
-  if (window.scrollY >= section.offsetTop) {
+  if (window.scrollY >= counter.offsetTop) {
     if (!started) {
-      nums.forEach((num) => startCount(num));
+      num.forEach((num) => startCount(num));
     }
     started = true;
   }
@@ -20,7 +21,6 @@ function startCount(el) {
     }
   }, 2000 / goal);
 }
-
 window.scroll({
   top: 3500, 
   left: 0, 
